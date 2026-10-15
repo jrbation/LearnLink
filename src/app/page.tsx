@@ -547,7 +547,7 @@ export default function LandingPage() {
           <div className="grid md:grid-cols-4 gap-8">
             <div className="md:col-span-1">
               <div className="mb-4">
-                <BrandLogo size="md" href="/" />
+                <BrandLogo size="md" href="/" darkMode />
               </div>
               <p className="text-sm text-slate-500 leading-relaxed">
                 Connecting Teachers, Students, and Parents for modern,

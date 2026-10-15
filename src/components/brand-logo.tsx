@@ -6,6 +6,7 @@ interface BrandLogoProps {
   size?: "sm" | "md" | "lg" | "xl";
   href?: string;
   showTagline?: boolean;
+  darkMode?: boolean;
 }
 
 const SIZES = {
@@ -20,6 +21,7 @@ export function BrandLogo({
   size = "md",
   href,
   showTagline = false,
+  darkMode = false,
 }: BrandLogoProps) {
   const config = SIZES[size] || SIZES.md;
 
@@ -36,11 +38,11 @@ export function BrandLogo({
         />
       </div>
       <div>
-        <span className="text-lg font-bold text-slate-900 tracking-tight leading-none block">
+        <span className={`text-lg font-bold tracking-tight leading-none block ${darkMode ? 'text-white' : 'text-slate-900'}`}>
           Learn<span style={{ color: "#008080" }}>Link</span>
         </span>
         {showTagline && (
-          <span className="text-[10px] text-slate-500 font-medium block mt-0.5 tracking-tight">
+          <span className={`text-[10px] font-medium block mt-0.5 tracking-tight ${darkMode ? 'text-slate-400' : 'text-slate-500'}`}>
             Connecting Teachers, Students, and Parents
           </span>
         )}
