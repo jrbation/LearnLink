@@ -18,6 +18,10 @@ export const metadata: Metadata = {
     "parents",
     "LMS",
   ],
+  icons: {
+    icon: "/logo.png",
+    apple: "/logo.png",
+  },
 };
 
 export default function RootLayout({

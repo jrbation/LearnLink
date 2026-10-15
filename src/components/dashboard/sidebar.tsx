@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import { BrandLogo } from "@/components/brand-logo";
 import {
   GraduationCap,
   LayoutDashboard,
@@ -96,15 +97,8 @@ export function Sidebar({ role, isOpen, onClose, unreadCount = 0 }: SidebarProps
         }`}
       >
         {/* Brand / Logo */}
-        <div className="h-16 flex items-center justify-between px-5 border-b border-slate-100">
-          <Link href="/" className="flex items-center gap-2.5">
-            <div className="w-8 h-8 bg-gradient-accent rounded-xl flex items-center justify-center">
-              <GraduationCap className="w-4 h-4 text-white" />
-            </div>
-            <span className="text-lg font-bold text-slate-900">
-              Learn<span className="text-primary-600">Link</span>
-            </span>
-          </Link>
+        <div className="h-16 flex items-center justify-between px-4 border-b border-slate-100">
+          <BrandLogo size="sm" href="/" />
           <button
             onClick={onClose}
             className="p-1 rounded-lg text-slate-400 hover:text-slate-600 lg:hidden"

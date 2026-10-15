@@ -2,7 +2,8 @@
 
 import { useState } from "react";
 import Link from "next/link";
-import { GraduationCap, ArrowLeft, Mail, MessageSquare, Send, CheckCircle2 } from "lucide-react";
+import { ArrowLeft, Mail, MessageSquare, Send, CheckCircle2 } from "lucide-react";
+import { BrandLogo } from "@/components/brand-logo";
 
 export default function ContactPage() {
   const [name, setName] = useState("");
@@ -20,14 +21,7 @@ export default function ContactPage() {
     <div className="min-h-screen bg-surface">
       <header className="glass border-b border-slate-200/80 sticky top-0 z-40">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
-          <Link href="/" className="flex items-center gap-2.5">
-            <div className="w-8 h-8 bg-gradient-accent rounded-xl flex items-center justify-center">
-              <GraduationCap className="w-4 h-4 text-white" />
-            </div>
-            <span className="text-lg font-bold text-slate-900">
-              Learn<span className="text-primary-600">Link</span>
-            </span>
-          </Link>
+          <BrandLogo size="sm" href="/" />
           <Link href="/" className="btn btn-secondary btn-sm">
             <ArrowLeft className="w-4 h-4" />
             Back to Home

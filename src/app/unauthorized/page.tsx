@@ -1,9 +1,13 @@
 import Link from "next/link";
 import { ShieldAlert, ArrowLeft, Home } from "lucide-react";
+import { BrandLogo } from "@/components/brand-logo";
 
 export default function UnauthorizedPage() {
   return (
-    <div className="min-h-screen bg-surface flex items-center justify-center p-6">
+    <div className="min-h-screen bg-surface flex flex-col items-center justify-center p-6">
+      <div className="mb-6">
+        <BrandLogo size="md" href="/" />
+      </div>
       <div className="max-w-md w-full card p-8 text-center animate-fade-in">
         <div className="w-16 h-16 rounded-2xl bg-red-50 text-red-600 flex items-center justify-center mx-auto mb-5">
           <ShieldAlert className="w-8 h-8" />

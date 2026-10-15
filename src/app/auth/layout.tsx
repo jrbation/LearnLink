@@ -1,5 +1,6 @@
-import { GraduationCap } from "lucide-react";
+import Image from "next/image";
 import Link from "next/link";
+import { BrandLogo } from "@/components/brand-logo";
 
 export default function AuthLayout({ children }: { children: React.ReactNode }) {
   return (
@@ -10,28 +11,38 @@ export default function AuthLayout({ children }: { children: React.ReactNode }) 
         <div className="absolute bottom-10 right-10 w-96 h-96 bg-accent-500/10 rounded-full blur-3xl" />
 
         <div className="relative flex flex-col items-center justify-center w-full px-12">
-          <div className="w-20 h-20 bg-gradient-accent rounded-3xl flex items-center justify-center mb-8 animate-float">
-            <GraduationCap className="w-10 h-10 text-white" />
+          <div className="w-32 h-32 rounded-3xl p-3 bg-white shadow-2xl flex items-center justify-center mb-6 animate-float border-2 border-white/20">
+            <Image
+              src="/logo.png"
+              alt="LearnLink Logo"
+              width={112}
+              height={112}
+              priority
+              className="object-contain w-full h-full"
+            />
           </div>
-          <h1 className="text-4xl font-bold text-white mb-4 text-center">
-            Learn<span className="text-primary-300">Link</span>
+          <h1 className="text-4xl font-bold text-white mb-2 text-center tracking-tight">
+            Learn<span style={{ color: "#2dd4bf" }}>Link</span>
           </h1>
-          <p className="text-lg text-slate-300 text-center max-w-sm leading-relaxed">
-            Connecting Teachers, Students, and Parents for modern, seamless learning.
+          <p className="text-sm font-semibold tracking-wide text-teal-100 uppercase mb-3 text-center">
+            Connecting Teachers, Students, and Parents
+          </p>
+          <p className="text-base text-slate-300 text-center max-w-sm leading-relaxed">
+            A modern, centralized learning management platform for remote education.
           </p>
 
-          <div className="mt-16 grid grid-cols-3 gap-6 text-center">
-            <div className="glass-dark rounded-2xl p-5">
+          <div className="mt-12 grid grid-cols-3 gap-6 text-center w-full max-w-md">
+            <div className="glass-dark rounded-2xl p-4">
               <div className="text-2xl font-bold text-white">🎓</div>
-              <div className="text-xs text-slate-400 mt-2">Teachers</div>
+              <div className="text-xs text-teal-100 font-semibold mt-2">Teachers</div>
             </div>
-            <div className="glass-dark rounded-2xl p-5">
+            <div className="glass-dark rounded-2xl p-4">
               <div className="text-2xl font-bold text-white">📚</div>
-              <div className="text-xs text-slate-400 mt-2">Students</div>
+              <div className="text-xs text-teal-100 font-semibold mt-2">Students</div>
             </div>
-            <div className="glass-dark rounded-2xl p-5">
+            <div className="glass-dark rounded-2xl p-4">
               <div className="text-2xl font-bold text-white">👨‍👩‍👧</div>
-              <div className="text-xs text-slate-400 mt-2">Parents</div>
+              <div className="text-xs text-teal-100 font-semibold mt-2">Parents</div>
             </div>
           </div>
         </div>
@@ -40,15 +51,8 @@ export default function AuthLayout({ children }: { children: React.ReactNode }) 
       {/* Right panel - form */}
       <div className="flex-1 flex items-center justify-center p-6 sm:p-8">
         <div className="w-full max-w-md">
-          <div className="lg:hidden flex items-center gap-2.5 mb-8">
-            <Link href="/" className="flex items-center gap-2.5">
-              <div className="w-9 h-9 bg-gradient-accent rounded-xl flex items-center justify-center">
-                <GraduationCap className="w-5 h-5 text-white" />
-              </div>
-              <span className="text-xl font-bold text-slate-900">
-                Learn<span className="text-primary-600">Link</span>
-              </span>
-            </Link>
+          <div className="lg:hidden mb-8">
+            <BrandLogo size="md" href="/" showTagline />
           </div>
           {children}
         </div>

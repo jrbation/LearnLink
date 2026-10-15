@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { BrandLogo } from "@/components/brand-logo";
 import {
   BookOpen,
   Users,
@@ -27,14 +28,7 @@ export default function LandingPage() {
       <nav className="fixed top-0 left-0 right-0 z-50 glass border-b border-white/20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between h-16">
-            <Link href="/" className="flex items-center gap-2.5">
-              <div className="w-9 h-9 bg-gradient-accent rounded-xl flex items-center justify-center">
-                <GraduationCap className="w-5 h-5 text-white" />
-              </div>
-              <span className="text-xl font-bold text-slate-900">
-                Learn<span className="text-primary-600">Link</span>
-              </span>
-            </Link>
+            <BrandLogo size="md" href="/" />
 
             <div className="hidden md:flex items-center gap-8">
               <Link
@@ -552,14 +546,9 @@ export default function LandingPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid md:grid-cols-4 gap-8">
             <div className="md:col-span-1">
-              <Link href="/" className="flex items-center gap-2.5 mb-4">
-                <div className="w-9 h-9 bg-gradient-accent rounded-xl flex items-center justify-center">
-                  <GraduationCap className="w-5 h-5 text-white" />
-                </div>
-                <span className="text-xl font-bold text-white">
-                  Learn<span className="text-primary-400">Link</span>
-                </span>
-              </Link>
+              <div className="mb-4">
+                <BrandLogo size="md" href="/" />
+              </div>
               <p className="text-sm text-slate-500 leading-relaxed">
                 Connecting Teachers, Students, and Parents for modern,
                 seamless learning experiences.
